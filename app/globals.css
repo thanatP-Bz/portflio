@@ -4,6 +4,10 @@
 @theme {
   --font-Ovo: Ovo;
   --font-Outfit: Outfit;
+
+  --lightHover: #fcf4ff;
+  --darkHover: #2a004a;
+  --darkTheme: #11001f;
 }
 /* 
 :root {
