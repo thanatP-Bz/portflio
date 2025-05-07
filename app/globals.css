@@ -5,9 +5,12 @@
   --font-Ovo: Ovo;
   --font-Outfit: Outfit;
 
-  --lightHover: #fcf4ff;
-  --darkHover: #2a004a;
-  --darkTheme: #11001f;
+  --color-light: #fcf4ff;
+  --color-dark: #2a004a;
+  --color-darkTheme: #11001f;
+
+  --shadow-color-dark: 4px 4px 0 #000;
+  --light: 4px 4px 0 #fff;
 }
 /* 
 :root {

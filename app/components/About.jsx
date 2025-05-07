@@ -4,11 +4,14 @@ import { assets, infoList } from "@/assets/assets";
 
 const About = () => {
   return (
-    <div id="about" className="w-full px-[12%] py-24 scroll-mt-20 md:py-10">
+    <div
+      id="about"
+      className="w-full px-[12%] py-24 scroll-mt-20 md:py-10 lg:py-0"
+    >
       <h4 className="text-center mb-2 text-lg font-Ovo">Introduction</h4>
       <h2 className="text-center text-5xl font-Ovo">About me</h2>
 
-      <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+      <div className="flex w-full flex-col lg:flex-row items-center gap-10 my-20">
         <div className="w-64 sm:w-80 rounded-3xl max-w-none">
           <Image
             src={assets.user_image}
@@ -28,7 +31,7 @@ const About = () => {
             {infoList.map(({ icon, iconDark, title, description }, index) => (
               <li
                 key={index}
-                className="border-[0.5px] border-gray-400 rounded-xl p-4 cursor-pointer"
+                className="border-[0.5px] border-gray-400 rounded-xl p-4 cursor-pointer hover:-translate-y-1 duration-500 hover:bg-light hover:shadow-color-dark"
               >
                 <Image src={icon} alt={title} className="w-7 mt-3" />
                 <h3 className="my-4 font-semibold text-gray-700">{title}</h3>
