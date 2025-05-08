@@ -1,8 +1,10 @@
 import Image from "next/image";
 import { assets } from "@/assets/assets";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Navbar = () => {
+  const [isScroll, setIsScroll] = useState(false);
+
   const sideMenuRef = useRef();
 
   const openMenu = () => {
@@ -13,9 +15,24 @@ const Navbar = () => {
     sideMenuRef.current.style.transform = "translateX(16rem)";
     sideMenuRef.current.style = "transition duration-600 delay-100 ease-out";
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (scrollY > 50) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    });
+  }, []);
+
   return (
     <>
-      <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex flex-center justify-between z-50">
+      <nav
+        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex flex-center justify-between z-50 ${
+          isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""
+        }`}
+      >
         <a href="#top">
           <Image
             src={assets.logo}
@@ -23,7 +40,11 @@ const Navbar = () => {
             className="w-28 cursor-pointer mr-14"
           />
         </a>
-        <ul className="hidden md:flex item-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
+        <ul
+          className={`hidden md:flex item-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
+            isScroll ? "" : "bg-white shadow-sm bg-opacity-50"
+          }`}
+        >
           <li>
             <a href="#top" className="font-Ovo">
               Home
