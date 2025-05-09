@@ -11,6 +11,8 @@
 
   --shadow-color-dark: 4px 4px 0 #000;
   --light: 4px 4px 0 #fff;
+
+  --auto: repeat(auto-fit, minmax(200px, 1fr));
 }
 /* 
 :root {
