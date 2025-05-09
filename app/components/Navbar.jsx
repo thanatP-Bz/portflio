@@ -30,7 +30,7 @@ const Navbar = () => {
     <>
       <nav
         className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex flex-center justify-between z-50 ${
-          isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""
+          isScroll ? " bg-opacity-50 backdrop-blur-lg shadow-sm" : ""
         }`}
       >
         <a href="#top">
@@ -42,8 +42,8 @@ const Navbar = () => {
         </a>
         <ul
           className={`hidden md:flex item-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
-            isScroll ? "" : "bg-white shadow-sm bg-opacity-50"
-          }`}
+            isScroll ? "" : " bg-white shadow-sm bg-opacity-50"
+          } `}
         >
           <li>
             <a href="#top" className="font-Ovo">

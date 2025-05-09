@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-full px-[12%] py-24 scroll-mt-20 md:py-10 lg:py-0"
+      className="w-full px-[12%] py-0 scroll-mt-20 md:py-12 lg:py-0"
     >
       <h4 className="text-center mb-2 text-lg font-Ovo">Introduction</h4>
       <h2 className="text-center text-5xl font-Ovo">About me</h2>
