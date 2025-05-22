@@ -76,7 +76,7 @@ const Contact = () => {
             className="w-5 cursor-pointer"
           />
         </button>
-        <p className="mt-4">{result}!</p>
+        <p className="mt-4">{result}</p>
       </form>
     </div>
   );
